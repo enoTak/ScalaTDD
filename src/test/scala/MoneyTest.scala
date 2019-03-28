@@ -6,7 +6,9 @@ class MoneyTest extends FunSuite {
   test("dollar multiplication")
   {
     val five = new Dollar(5)
-    five.times(2)
-    assert(10 == five.amount)
+    val doubled = five.times(2)
+    assert(doubled.amount == 10)
+    val tripled =five.times(3)
+    assert(tripled.amount == 15)
   }
 }
