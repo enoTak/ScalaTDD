@@ -5,4 +5,10 @@ class Dollar (var amount: Int) {
   {
      new Dollar(amount * multiplier)
   }
+
+  // TODO: how implemented cast?
+  def equals(rhs: Dollar) : Boolean =
+  {
+   amount == rhs.amount
+  }
 }

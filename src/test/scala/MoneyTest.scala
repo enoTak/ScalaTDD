@@ -11,4 +11,11 @@ class MoneyTest extends FunSuite {
     val tripled =five.times(3)
     assert(tripled.amount == 15)
   }
+
+  test("equality")
+  {
+    // TODO: modify to Scala-like implementation
+    assert(new Dollar(5).equals(new Dollar(5)))
+    assert(!(new Dollar(5).equals(new Dollar(6))))
+  }
 }
