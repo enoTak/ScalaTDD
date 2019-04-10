@@ -2,10 +2,8 @@ package pis
 
 import org.scalatest.FunSuite
 
-class MultiTableTest extends FunSuite
-{
-  test("generate")
-  {
+class MultiTableTest extends FunSuite {
+  test("generate") {
     val size = 3
     val formatter = (x: String) =>  x + " " * (2 - x.length)
     val operator = (x: Int, y:Int) => x * y

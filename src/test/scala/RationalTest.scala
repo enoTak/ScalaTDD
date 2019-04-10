@@ -4,24 +4,20 @@ import org.scalatest.FunSuite
 
 class RationalTest extends FunSuite
 {
-  test ("to string")
-  {
+  test ("to string") {
     val expect = "2 / 3"
     val v = new Rational(2, 3)
     val actual = v.toString()
     assert(actual == expect)
   }
 
-  test ("zero denominator")
-  {
-    assertThrows[IllegalArgumentException]
-    {
+  test ("zero denominator") {
+    assertThrows[IllegalArgumentException] {
       new Rational(2, 0)
     }
   }
 
-  test( "addition")
-  {
+  test( "addition") {
     val lhs = new Rational(1, 2)
     val rhs = new Rational(2, 3)
     val actual = lhs + rhs
@@ -29,8 +25,7 @@ class RationalTest extends FunSuite
     assert(expect == actual)
   }
 
-  test( "subtraction")
-  {
+  test( "subtraction") {
     val lhs = new Rational(1, 2)
     val rhs = new Rational(2, 3)
     val actual = lhs - rhs
@@ -38,8 +33,7 @@ class RationalTest extends FunSuite
     assert(expect == actual)
   }
 
-  test( "multiplication")
-  {
+  test( "multiplication") {
     val lhs = new Rational(1, 2)
     val rhs = new Rational(1, 3)
     val actual = lhs * rhs
@@ -47,8 +41,7 @@ class RationalTest extends FunSuite
     assert(expect == actual)
   }
 
-  test( "division")
-  {
+  test( "division") {
     val lhs = new Rational(1, 2)
     val rhs = new Rational(1, 3)
     val actual = lhs / rhs
@@ -56,54 +49,47 @@ class RationalTest extends FunSuite
     assert(expect == actual)
   }
 
-  test( "addition with int")
-  {
+  test( "addition with int") {
     val lhs = new Rational(2, 3)
     val actual = lhs + 2
     val expect = new Rational(8, 3)
     assert(expect == actual)
   }
 
-  test( "subtraction with int")
-  {
+  test( "subtraction with int") {
     val lhs = new Rational(2, 3)
     val actual = lhs - 2
     val expect = new Rational(-4, 3)
     assert(expect == actual)
   }
 
-  test( "multiplication with int")
-  {
+  test( "multiplication with int") {
     val lhs = new Rational(1, 2)
     val actual = lhs * 2
     val expect = new Rational(1, 1)
     assert(expect == actual)
   }
 
-  test( "division with int")
-  {
+  test( "division with int") {
     val lhs = new Rational(1, 2)
     val actual = lhs / 2
     val expect = new Rational(1, 4)
     assert(expect == actual)
   }
 
-  test( "reduction")
-  {
+  test( "reduction") {
     val lhs = new Rational(2, 4)
     val rhs = new Rational(1, 2)
     assert(lhs == rhs)
   }
 
-  test( "compare two Rationals")
-  {
+  test( "compare two Rationals") {
     val smaller = new Rational(1, 3)
     val larger = new Rational(1, 2)
     assert(smaller lessThan larger)
   }
 
-  test( "max of two Rationals")
-  {
+  test( "max of two Rationals") {
     val smaller = new Rational(1, 3)
     val larger = new Rational(1, 2)
     val expect = new Rational(1, 2)
@@ -111,8 +97,7 @@ class RationalTest extends FunSuite
     assert(expect == actual)
   }
 
-  test( "integer")
-  {
+  test( "integer") {
     val expect = new Rational(3, 1)
     val actual = new Rational(3)
     assert(expect == actual)

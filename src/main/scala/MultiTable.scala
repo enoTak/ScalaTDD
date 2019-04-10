@@ -3,8 +3,7 @@ package pis
 class MultiTable(
   val size: Int,
   private val formatter: String => String,
-  private val binaryOperator: (Int, Int) => Int)
-{
+  private val binaryOperator: (Int, Int) => Int) {
   require(size > 0)
 
   private def makeRowSeq(row: Int) =
